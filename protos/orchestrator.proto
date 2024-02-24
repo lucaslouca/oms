@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+package orchestrator;
+
+service Orchestrator {
+  rpc AddVertex(stream ApiVertex) returns (ApiGraphSummary) {}
+  rpc DeleteVertex(stream ApiVertex) returns (ApiGraphSummary) {}
+  rpc AddEdge(stream ApiEdge) returns (ApiGraphSummary) {}
+  rpc DeleteEdge(stream ApiEdge) returns (ApiGraphSummary) {}
+  rpc Search(ApiSearchArgs) returns (ApiSearchResults) {}
+}
+
+
+message ApiVertex {
+  string key = 1;
+  string value = 2;
+}
+
+message ApiEdge {
+  string from = 1;
+  string to = 2;
+  string label = 3;
+  string key = 4;
+}
+
+message ApiGraphSummary {
+  int32 vertex_count = 1;
+  int32 edge_count = 2;
+}
+
+message ApiSearchArgs {
+  string query_key = 1;
+  int32 level = 2;
+}
+
+message ApiSearchResults {
+  repeated ApiVertex vertices = 1;
+  repeated ApiEdge edges = 2;
+}

@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Generate Kafka Messages",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/generate.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Request",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/api_test.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}

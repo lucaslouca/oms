@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+.DS_Store
+
+# draw.io
+*.dtmp
+*.bkp
+
+__pycache__
+env
+src/build

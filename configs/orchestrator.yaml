@@ -1,0 +1,9 @@
+kafka:
+  bootstrap.servers: localhost:9092
+  schema.registry.url: http://localhost:8081
+  client.id: orchestrator
+workers:
+  - id: worker_A
+    port: 50051
+  - id: worker_B
+    port: 50052
