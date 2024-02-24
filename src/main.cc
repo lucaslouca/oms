@@ -102,7 +102,7 @@ std::shared_ptr<SignalChannel> ListenForSigint(sigset_t& sigset) {
 int main(int argc, char** argv) {
     /*
     $ ps aux | grep orchestrator
-    lucas  1268   0.0  0.1 408617344  87840   ??  TX   11:04AM   4:04.82 ...
+    user  1268   0.0  0.1 408617344  87840   ??  TX   11:04AM   4:04.82 ...
 
     # Grab the definitive parent ID of whatever process ID you feed it and act on it
     $ ps -p 1268 -o ppid=
